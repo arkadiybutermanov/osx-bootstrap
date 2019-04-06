@@ -88,6 +88,9 @@ defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}"
 defaults write com.apple.dock show-recents -int 0
 defaults write com.apple.menuextra.battery ShowPercent YES
 
+mkdir "${HOME}/Screenshots"
+defaults write com.apple.screencapture location "${HOME}/Screenshots"
+
 # Wipe all (default) app icons from the Dock
 # This is only really useful when setting up a new Mac, or if you don’t use
 # the Dock to launch apps.
