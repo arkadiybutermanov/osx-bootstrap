@@ -85,6 +85,9 @@ defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}"
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
 
+defaults write com.apple.dock show-recents -int 0
+defaults write com.apple.menuextra.battery ShowPercent YES
+
 # Wipe all (default) app icons from the Dock
 # This is only really useful when setting up a new Mac, or if you don’t use
 # the Dock to launch apps.
@@ -93,7 +96,7 @@ defaults write com.apple.dock persistent-apps -array
 # Add applications to Dock
 for app in \
   Slack \
-  iTerm \
+  iTerm
 do
   defaults write com.apple.dock "persistent-apps" -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/$app.app/</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
 done
@@ -119,11 +122,6 @@ defaults write com.apple.dock orientation -string 'left'
 ###############################################################################
 # Spotlight                                                                   #
 ###############################################################################
-
-# Disable Spotlight indexing for any volume that gets mounted and has not yet
-# been indexed before.
-# Use `sudo mdutil -i off "/Volumes/foo"` to stop indexing any volume.
-sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
 
 # Make sure indexing is enabled for the main volume
 sudo mdutil -i on / > /dev/null
