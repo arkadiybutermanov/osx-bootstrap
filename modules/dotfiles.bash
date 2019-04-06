@@ -6,7 +6,7 @@ source "$osx_bootstrap/modules/functions.bash"
 info_echo "Installing bash dotfiles to ~/.dotfiles"
 
 if [ ! -d ~/.dotfiles ]; then
-  git clone https://github.com/fs/dotfiles.git ~/.dotfiles
+  git clone https://github.com/arkadiybutermanov/dotfiles.git ~/.dotfiles
   (
     cd ~/.dotfiles|| exit
     bash script/setup

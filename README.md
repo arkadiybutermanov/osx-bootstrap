@@ -20,7 +20,7 @@ bash <(curl -s https://raw.githubusercontent.com/fs/osx-bootstrap/master/bin/set
 Or you can run each module script one-by-one:
 
 ```bash
-git clone -b master https://github.com/fs/osx-bootstrap.git
+git clone -b master https://github.com/arkadiybutermanov/osx-bootstrap.git
 ~/.osx-bootstrap/modules/osx_defaults.bash
 ```
 

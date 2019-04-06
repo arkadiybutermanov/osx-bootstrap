@@ -6,21 +6,17 @@ OSX_BOOTSTRAP=${OSX_BOOTSTRAP:-"$HOME/.osx-bootstrap"}
 
 if [ ! -d "$OSX_BOOTSTRAP" ]
 then
-  git clone -b master https://github.com/fs/osx-bootstrap.git "$OSX_BOOTSTRAP"
+  git clone -b master https://github.com/arkadiybutermanov/osx-bootstrap.git "$OSX_BOOTSTRAP"
 fi
 
 modules=(
-  osx_version
   osx_update
   projectdir
-  ssh
   brew
   ruby
-  node
   osx_defaults
   osx_security
   dotfiles
-  sublime_bootstrap
 )
 
 for module in "${modules[@]}"

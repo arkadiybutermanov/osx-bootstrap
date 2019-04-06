@@ -16,6 +16,8 @@ info_echo "Install Brew formalue"
 brew tap "Homebrew/bundle" 2> /dev/null
 brew bundle install --file="$osx_bootstrap/Brewfile"
 
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 info_echo "Remove outdated versions from the cellar"
 
 brew cleanup
