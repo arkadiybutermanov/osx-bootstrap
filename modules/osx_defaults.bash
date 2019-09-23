@@ -98,8 +98,10 @@ defaults write com.apple.dock persistent-apps -array
 
 # Add applications to Dock
 for app in \
+  Google Chrome \
   Slack \
-  iTerm
+  iTerm \
+  RubyMine
 do
   defaults write com.apple.dock "persistent-apps" -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/$app.app/</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
 done
@@ -141,6 +143,11 @@ defaults write com.apple.terminal StringEncodings -array 4
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+
+defaults write com.apple.AppleMultitouchTrackpad ActuationStrength -int 0
+defaults write com.apple.BezelServices kDim -bool false
+defaults write com.apple.BezelServices kDimTime -int 1
+sudo fdesetup enable
 
 ###############################################################################
 # Kill affected applications                                                  #

@@ -1,6 +1,6 @@
 # OS X Bootstrap
 
-[![Build Status](https://travis-ci.org/fs/osx-bootstrap.svg?branch=master)](https://travis-ci.org/fs/osx-bootstrap)
+[![Build Status](https://travis-ci.org/arkadiybutermanov/osx-bootstrap.svg?branch=master)](https://travis-ci.org/arkadiybutermanov/osx-bootstrap)
 
 Script to set up a macOS X for Rails development.
 
@@ -14,7 +14,7 @@ Run the setup script which will clone repository to `~/.osx-bootstrap` directory
 and run `~/.osx-bootstrap/modules/*` scripts.
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/fs/osx-bootstrap/master/bin/setup)
+bash <(curl -s https://raw.githubusercontent.com/arkadiybutermanov/osx-bootstrap/master/bin/setup)
 ```
 
 Or you can run each module script one-by-one:
@@ -60,6 +60,6 @@ git clone -b master https://github.com/arkadiybutermanov/osx-bootstrap.git
 
 OS X Bootstrap is maintained by [Timur Vafin](http://github.com/timurvafin).
 It was written by [Flatstack](http://www.flatstack.com) with the help of our
-[contributors](http://github.com/fs/osx-bootstrap/contributors).
+[contributors](http://github.com/arkadiybutermanov/osx-bootstrap/contributors).
 
 [<img src="http://www.flatstack.com/logo.svg" width="100"/>](http://www.flatstack.com)

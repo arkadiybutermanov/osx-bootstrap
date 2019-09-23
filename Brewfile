@@ -14,6 +14,8 @@ brew "git"
 brew "postgresql"
 brew "imagemagick"
 brew "z"
+brew "fzf"
+brew "zplug"
 brew "zsh"
 
 # Essential Mac applications
@@ -30,9 +32,12 @@ cask "postgres"
 cask "folx"
 cask "vlc"
 cask "webtorrent"
-cask "rubymine"
+cask "visual-studio-code"
 cask "google-backup-and-sync"
 cask "telegram"
+cask "outline"
+cask "outline-manager"
+cask "daisydisk"
 
 # Node version manager
 brew "nvm"
