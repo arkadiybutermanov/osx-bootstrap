@@ -54,15 +54,6 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 # Finder                                                                      #
 ###############################################################################
 
-# Finder: disable window animations and Get Info animations
-defaults write com.apple.finder DisableAllAnimations -bool true
-
-# Finder: show path bar
-defaults write com.apple.finder ShowPathbar -bool true
-
-# When performing a search, search the current folder by default
-defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
-
 # Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
@@ -72,9 +63,6 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 # Use list view in all Finder windows by default
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
 defaults write com.apple.Finder FXPreferredViewStyle Nlsv
-
-# # Disable the warning before emptying the Trash
-defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
 # Set $HOME as the default location for new Finder windows
 # For other paths, use `PfLo` and `file:///full/path/here/`
@@ -100,8 +88,6 @@ defaults write com.apple.dock persistent-apps -array
 for app in \
   Google Chrome \
   Slack \
-  iTerm \
-  RubyMine
 do
   defaults write com.apple.dock "persistent-apps" -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/$app.app/</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
 done
@@ -141,8 +127,6 @@ sudo mdutil -E / > /dev/null
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
 
-# Don’t display the annoying prompt when quitting iTerm
-defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
 defaults write com.apple.AppleMultitouchTrackpad ActuationStrength -int 0
 defaults write com.apple.BezelServices kDim -bool false
@@ -153,6 +137,6 @@ sudo fdesetup enable
 # Kill affected applications                                                  #
 ###############################################################################
 
-for app in "cfprefsd" "Dock" "Finder" "Safari"  "SystemUIServer" "iTerm"; do
+for app in "cfprefsd" "Dock" "Finder" "Safari"  "SystemUIServer"; do
   killall "${app}" > /dev/null 2>&1 || true
 done
